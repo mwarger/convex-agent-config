@@ -1,10 +1,15 @@
-# Convex Backend Development Agent
+# Convex Development Agents
 
-This repository contains a specialized Claude agent configuration for Convex backend development.
+This repository contains a collection of Claude subagents to help with Convex development tasks.
 
 ## Overview
 
-The Convex agent is an expert system designed to help with:
+This repository provides a set of specialized subagents for Convex development:
+- `convex-schema-agent` for database schema design and migrations
+- `convex-api-model-agent` for queries, mutations, and actions
+- `convex-frontend-agent` for client integration
+
+Together these agents help with:
 - Designing and implementing Convex backend systems
 - Creating efficient database schemas with proper indexes
 - Writing type-safe queries, mutations, and actions
@@ -18,13 +23,15 @@ The Convex agent is an expert system designed to help with:
 .
 ├── .claude/
 │   └── agents/
-│       └── convex-agent.md    # Convex backend architect agent configuration
-└── README.md                   # This file
+│       ├── convex-schema-agent.md     # Schema specialist
+│       ├── convex-api-model-agent.md  # API and model specialist
+│       └── convex-frontend-agent.md   # Frontend integration specialist
+└── README.md
 ```
 
 ## Agent Configuration
 
-The `convex-agent.md` file contains:
+Each subagent file describes a focused role for Convex development:
 - Agent metadata (name, description, tools, color)
 - Technical guidelines for Convex development
 - Best practices and code review criteria
@@ -32,12 +39,10 @@ The `convex-agent.md` file contains:
 
 ## Usage
 
-This agent can be invoked when you need to:
-- Design new Convex backend features
-- Review Convex mutations, queries, or actions
-- Structure database schemas for Convex applications
-- Implement real-time functionality
-- Migrate from other backend systems to Convex
+Invoke the subagent that matches your task:
+- Use **convex-schema-agent** for schema design or migrations
+- Use **convex-api-model-agent** for implementing backend logic
+- Use **convex-frontend-agent** when updating UI code that talks to Convex
 
 ## Key Features
 
@@ -56,4 +61,4 @@ The agent follows strict guidelines including:
 - Efficient pagination for large datasets
 - Proper error handling and edge case consideration
 
-For detailed technical specifications, see the full agent configuration in `.claude/agents/convex-agent.md`.
+For detailed technical specifications, see the agent files under `.claude/agents/`.
